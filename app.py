@@ -9,7 +9,7 @@ from src.transform_weather import transform_weather_data
 from src.save_excel import save_all_to_excel
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.family'] = 'Microsoft JhengHei'  # 微軟正黑體
+plt.rcParams['font.family'] = ['Microsoft JhengHei', 'SimHei', 'Noto Sans CJK TC', 'Arial Unicode MS']
 plt.rcParams['axes.unicode_minus'] = False  # 顯示負號
 
 
