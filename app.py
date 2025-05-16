@@ -8,10 +8,17 @@ from src.fetch_weather import fetch_weather_data
 from src.transform_weather import transform_weather_data
 from src.save_excel import save_all_to_excel
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 
-plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = ['Noto Sans CJK TC', 'SimHei', 'Arial Unicode MS']
+# 註冊中文字型（確保路徑正確）
+font_path = os.path.join("fonts", "msjh.ttc")  # ← 替換為你用的字型檔案名
+font_manager.fontManager.addfont(font_path)
+zh_font = font_manager.FontProperties(fname=font_path).get_name()
+
+# 設定 matplotlib 使用這個字型
+plt.rcParams['font.family'] = zh_font
 plt.rcParams['axes.unicode_minus'] = False
+
 
 load_dotenv()
 API_KEY = os.getenv("CWB_API_KEY")
