@@ -41,7 +41,7 @@ def run_weather_etl():
 
 
 # ✅ 毎日9時に実行スケジュールを設定
-schedule.every().day.at("23:53").do(run_weather_etl)
+schedule.every().day.at("09:53").do(run_weather_etl)
 
 print("⏳ スケジュールを開始します... Ctrl+Cで停止")
 
